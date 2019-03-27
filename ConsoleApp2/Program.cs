@@ -10,6 +10,22 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Downloading file");
+            Download();
+            Console.ReadLine();
+
+        }
+
+
+        static void Download()
+        {
+            Task.Run(() => {
+
+                Thread.Sleep(3000);
+                Console.WriteLine("Download  Complete");
+            });
+
         }
     }
 }
+
